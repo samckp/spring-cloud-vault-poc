@@ -1,0 +1,25 @@
+
+ Vault Web UI
+ http://127.0.0.1:8200/ui/
+
+ commands to execute
+ 1. C:\vault> vault server --dev --dev-root-token-id="00000000-0000-0000-0000-000000000000"
+Result :
+PowerShell:
+    $env:VAULT_ADDR="http://127.0.0.1:8200"
+cmd.exe:
+    set VAULT_ADDR=http://127.0.0.1:8200
+
+The unseal key and root token are displayed below in case you want to
+seal/unseal the Vault or re-authenticate.
+
+Unseal Key: 5SOYvbuNhraOd0SeMQdaCTB1t1MTyNZ6Fz0ctipxY/s=
+Root Token: 00000000-0000-0000-0000-000000000000
+
+
+ 2. C:\vault> set VAULT_ADDR=http://127.0.0.1:8200
+
+ 3. vault kv put secret/spring-vault-config-poc example.username=admin example.password=admin
+
+ 4.  vault kv get secret/spring-vault-config-poc
+
